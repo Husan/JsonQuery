@@ -1,82 +1,82 @@
-{
-  "query": {
-    "id": "v_smeta_form",
-    "source": "v_smeta_form",
-    "fields": [
-      {
-        "column": "id",
-        "format": "number",
-        "type": "number"
-      },
-      {
-        "column": "acc",
-        "format": "number(0-9, 27)",
-        "type": "text"
-      },
-      {
-        "column": "date_expire",
-        "format": "number(0-9, 27)",
-        "type": "text"
-      },
-      {
-        "column": "accname",
-        "format": "text",
-        "type": "text"
-      },
-      {
-        "column": "acccode_name",
-        "format": "text",
-        "type": "text"
-      }
-    ],
-    "filters": [
-      {
-        "column": "id",
-        "operator": "=",
-        "value": "123"
-      },
-      {
-        "column": "acc",
-        "operator": "=",
-        "value": "100010860262667011313092001"
-      },
-      {
-        "column": "date_expire",
-        "operator": "range",
-        "value": ["12.10.2022", "22.10.2022"]
-      },
-      {
-        "column": "emp",
-        "operator": "=",
-        "value": "TEST"
-      },
-      {
-        "column": "accname",
-        "operator": "exists",
-        "query": {
-          "id": "smetapoints",
-          "source": "select * from smetapoints s where s.idsmeta = v_smeta_form.id",
-          "fields": [
-            {
-              "column": "expense",
-              "type": "text",
-              "format": "text"
-            }
-          ],
-          "filters": [
-            {
-              "column": "expense",
-              "operator": "=",
-              "value": "14111100"
-            },
-            {
-              "column": "month",
-              "operator": "=",
-              "value": [1,2,3,4,5,6,7]
-            }
-          ]
+  {
+    "query": {
+      "id": "table_name",
+      "source": "table_name",
+      "fields": [
+        {
+          "column": "id",
+          "format": "number",
+          "type": "number"
+        },
+        {
+          "column": "account",
+          "format": "number(0-9, 20)",
+          "type": "text"
+        },
+        {
+          "column": "date_expire",
+          "format": "dd.MM.yyyy",
+          "type": "date"
+        },
+        {
+          "column": "account_name",
+          "format": "text",
+          "type": "text"
+        },
+        {
+          "column": "acccode_name",
+          "format": "text",
+          "type": "text"
         }
-      }
-    ]
+      ],
+      "filters": [
+        {
+          "column": "id",
+          "operator": "=",
+          "value": "123"
+        },
+        {
+          "column": "acc",
+          "operator": "=",
+          "value": "100010860262667011313092001"
+        },
+        {
+          "column": "date_expire",
+          "operator": "range",
+          "value": ["12.10.2022", "22.10.2022"]
+        },
+        {
+          "column": "emp",
+          "operator": "=",
+          "value": "TEST"
+        },
+        {
+          "column": "accname",
+          "operator": "exists",
+          "query": {
+            "id": "smetapoints",
+            "source": "select * from smetapoints s where s.idsmeta = v_smeta_form.id",
+            "fields": [
+              {
+                "column": "expense",
+                "type": "text",
+                "format": "text"
+              }
+            ],
+            "filters": [
+              {
+                "column": "expense",
+                "operator": "=",
+                "value": "14111100"
+              },
+              {
+                "column": "month",
+                "operator": "=",
+                "value": [1,2,3,4,5,6,7]
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
-}

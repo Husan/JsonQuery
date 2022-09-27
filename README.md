@@ -23,7 +23,7 @@ Json format asosiy qismlari bu :
 kutubhona filters qismida operator "exists" bo'lsa bunda "value" maydon 
 o'rniga yana "query" beriladi va "query" yana yuqoridagi formatta takrorlanadi
 bu sql selectda subquery ishlatish imkonini beradi!
-
+ 
 Misol:
 ```json
     {

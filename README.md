@@ -4,7 +4,6 @@ converter Json format to Sql
 <h1>Eslatma</h1>
 <h3>
 Ushbu repositoryga tegishli resurslar(Java kod, json format) <span style="color:green"><b>Islomda</b></span> joiz bo'lmagan maqsadlarda be'vosita va bilvosita ham ishlarga ishlatilishi <span style="color:red">mumkin emas!</span>
-(Ayniqsa ribo va shunga o'hshash joiz bo'lmagan ishlarda)
 </h3>
 
 
